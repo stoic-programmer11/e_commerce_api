@@ -12,7 +12,9 @@ app.use(express.json()); // JSON to Javascript Object
 app.use(cors()); // Origenes cruzados / peticion de netlify a raleway
 app.use(morgan("tiny")); // Ver datos en consola, sirve para detectar errores
 
-
+db.sync({force: false})
+  .then(() => console.log('Autenticacion exitosa'))
+  .catch((error) => console.log(error))
 
 db.authenticate()
   .then(() => console.log("Base de datos autenticada"))
