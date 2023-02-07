@@ -31,7 +31,7 @@ const swaggerDocs = (app, port) => {
     res.send(swaggerSpec);
   });
   console.log(
-    `Documentation available in ${process.env.URL}:${port}/api/v1/docs`
+    `Documentation available in ${process.env.URL}/api/v1/docs`
   );
 };
 
